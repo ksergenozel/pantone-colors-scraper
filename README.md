@@ -19,16 +19,18 @@ Each object in the dataset corresponds to a unique PANTONE color record, structu
   - `Fashion & Interior Designers`
   - `Graphic Designers`
   - `Industrial Designers`
-- **`rgb`**: The RGB color code.
 - **`hex`**: The HEX color code.
+- **`rgb`**: The RGB color code.
+- **`cmyk`**: The CMYK color code.
 
 ```json
 {
   "code": "17-1230 TCX",
   "name": "Mocha Mousse",
   "collection": "Fashion & Interior Designers",
-  "rgb": "rgb(164,120,100)",
-  "hex": "#A47864"
+  "hex": "#A47864",
+  "rgb": [164, 120, 100],
+  "cmyk": [0, 27, 39, 36]
 }
 ```
 
