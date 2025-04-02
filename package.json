@@ -1,0 +1,28 @@
+{
+  "name": "pantone-colors-scraper",
+  "version": "1.0.0",
+  "description": "A web scraper that collects PANTONE color data.",
+  "keywords": [
+    "pantone",
+    "colors",
+    "scraper"
+  ],
+  "homepage": "https://github.com/ksergenozel/pantone-colors-scraper#readme",
+  "bugs": {
+    "url": "https://github.com/ksergenozel/pantone-colors-scraper/issues"
+  },
+  "license": "MIT",
+  "author": "ksergenozel <ksergenozel@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksergenozel/pantone-colors-scraper.git"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
