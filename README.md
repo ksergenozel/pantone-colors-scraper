@@ -45,16 +45,19 @@ Each object in the dataset corresponds to a unique PANTONE color record, structu
 ## Installation
 
 Clone the repository:
+
 ```bash
 git clone https://github.com/ksergenozel/pantone-colors-scraper.git
 ```
 
 Navigate to the project folder:
+
 ```bash
 cd pantone-colors-scraper
 ```
 
 Install dependencies:
+
 ```bash
 npm install
 ```
@@ -65,7 +68,7 @@ npm install
 npm start
 ```
 
->This script will create a `data.json` file in the root directory.
+> This script will create a `data.json` file in the root directory.
 
 ## License
 

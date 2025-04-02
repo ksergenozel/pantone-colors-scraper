@@ -5,11 +5,11 @@ const baseUrl = "https://www.numerosamente.it/pantone-list";
 
 const collections = [
   {
-    slug: "fashion-and-interior-designers",
     name: "Fashion & Interior Designers",
+    slug: "fashion-and-interior-designers",
   },
-  { slug: "graphic-designers", name: "Graphic Designers" },
-  { slug: "industrial-designers", name: "Industrial Designers" },
+  { name: "Graphic Designers", slug: "graphic-designers" },
+  { name: "Industrial Designers", slug: "industrial-designers" },
 ];
 
 async function main() {
@@ -36,7 +36,7 @@ async function main() {
 
 main();
 
-async function scrapeCollection({ slug, name }) {
+async function scrapeCollection({ name, slug }) {
   let currentPageUrl = `${baseUrl}/${slug}`;
   const allColors = [];
 
@@ -62,7 +62,7 @@ async function scrapePage(url, collection) {
     const hex = $(el).find("td:nth-child(3)").text().trim();
     const name = $(el).find("td:nth-child(4)").text().trim();
 
-    if (code && rgb && hex) colors.push({ code, name, collection, rgb, hex });
+    if (code && rgb && hex) colors.push({ code, collection, hex, name, rgb });
   });
 
   const nextPageRelative = $("ul.pagination li.next a").attr("href");
