@@ -58,11 +58,24 @@ async function scrapePage(url, collection) {
 
   $("table tr").each((_, el) => {
     const code = $(el).find("td:nth-child(1)").text().trim();
-    const rgb = $(el).find("td:nth-child(2)").text().trim();
+    const rgbString = $(el).find("td:nth-child(2)").text().trim();
     const hex = $(el).find("td:nth-child(3)").text().trim();
     const name = $(el).find("td:nth-child(4)").text().trim();
 
-    if (code && rgb && hex) colors.push({ code, collection, hex, name, rgb });
+    if (code && rgbString && hex) {
+      const [r, g, b] = parseRgb(rgbString);
+      const rgb = [r, g, b];
+      const cmyk = rgbToCmyk(r, g, b);
+
+      colors.push({
+        code,
+        collection,
+        name,
+        hex,
+        rgb,
+        cmyk,
+      });
+    }
   });
 
   const nextPageRelative = $("ul.pagination li.next a").attr("href");
@@ -90,4 +103,41 @@ function removeDuplicates(data) {
 
   console.log(`Duplicates found: ${duplicates}`);
   return unique;
+}
+
+function parseRgb(rgbString) {
+  return rgbString
+    .replace("rgb(", "")
+    .replace(")", "")
+    .split(",")
+    .map((v) => parseInt(v.trim(), 10));
+}
+
+function rgbToCmyk(r, g, b) {
+  const rf = r / 255;
+  const gf = g / 255;
+  const bf = b / 255;
+
+  let c = 1 - rf;
+  let m = 1 - gf;
+  let y = 1 - bf;
+
+  const k = Math.min(c, m, y);
+
+  if (k > 0.997) {
+    return [0, 0, 0, 100];
+  }
+
+  if (k > 0.003) {
+    c = (c - k) / (1 - k);
+    m = (m - k) / (1 - k);
+    y = (y - k) / (1 - k);
+  }
+
+  const C = Math.round(c * 100);
+  const M = Math.round(m * 100);
+  const Y = Math.round(y * 100);
+  const K = Math.round(k * 100);
+
+  return [C, M, Y, K];
 }
