@@ -63,9 +63,9 @@ async function scrapePage(url, collection) {
     const name = $(el).find("td:nth-child(4)").text().trim();
 
     if (code && rgbString && hex) {
-      const [r, g, b] = parseRgb(rgbString);
+      const [r, g, b] = parseRGB(rgbString);
       const rgb = [r, g, b];
-      const cmyk = rgbToCmyk(r, g, b);
+      const cmyk = rgbToCMYK(r, g, b);
 
       colors.push({
         code,
@@ -87,14 +87,14 @@ async function scrapePage(url, collection) {
 }
 
 function removeDuplicates(data) {
-  const seen = new Set();
+  const temp = new Set();
   const unique = [];
   let duplicates = 0;
 
   for (const item of data) {
     const key = JSON.stringify(item);
-    if (!seen.has(key)) {
-      seen.add(key);
+    if (!temp.has(key)) {
+      temp.add(key);
       unique.push(item);
     } else {
       duplicates++;
@@ -105,7 +105,7 @@ function removeDuplicates(data) {
   return unique;
 }
 
-function parseRgb(rgbString) {
+function parseRGB(rgbString) {
   return rgbString
     .replace("rgb(", "")
     .replace(")", "")
@@ -113,7 +113,7 @@ function parseRgb(rgbString) {
     .map((v) => parseInt(v.trim(), 10));
 }
 
-function rgbToCmyk(r, g, b) {
+function rgbToCMYK(r, g, b) {
   const rf = r / 255;
   const gf = g / 255;
   const bf = b / 255;
