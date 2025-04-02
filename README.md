@@ -13,15 +13,15 @@ This scraper collects PANTONE&reg; color data from multiple collections with pag
 
 Each object in the dataset corresponds to a unique PANTONE&reg; color record, structured with the following fields:
 
-- **`code`**: The PANTONE&reg; color code.
-- **`name`**: The PANTONE&reg; color name.
-- **`collection`**: The PANTONE&reg; collection name.
+- **`code`**: PANTONE&reg; color code.
+- **`name`**: PANTONE&reg; color name.
+- **`collection`**: PANTONE&reg; collection name.
   - `Fashion & Interior Designers`
   - `Graphic Designers`
   - `Industrial Designers`
-- **`hex`**: The HEX color code.
-- **`rgb`**: The RGB color code.
-- **`cmyk`**: The CMYK color code.
+- **`hex`**: HEX color code.
+- **`rgb`**: RGB color code.
+- **`cmyk`**: CMYK color code.
 
 > CMYK values are approximated from RGB and do not reference ICC profiles.
 
