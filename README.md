@@ -1,21 +1,21 @@
-# PANTONE Colors Scraper
+# PANTONE&reg; Colors Scraper
 
-A web scraper that collects PANTONE color data from [numerosamente.it](https://www.numerosamente.it).
+A web scraper that collects PANTONE&reg; color data from [numerosamente.it](https://www.numerosamente.it).
 
 > **Disclaimer:**
-> This project is intended for non-commercial use only and is not associated with PANTONE.
+> This project is intended for non-commercial use only and is not associated with PANTONE&reg;.
 
 ## Features
 
-This scraper collects PANTONE color data from multiple collections with pagination support, deduplicates the results, and outputs structured JSON data.
+This scraper collects PANTONE&reg; color data from multiple collections with pagination support, deduplicates the results, and outputs structured JSON data.
 
 ## Data Structure
 
-Each object in the dataset corresponds to a unique PANTONE color record, structured with the following fields:
+Each object in the dataset corresponds to a unique PANTONE&reg; color record, structured with the following fields:
 
-- **`code`**: The PANTONE color code.
-- **`name`**: The PANTONE color name.
-- **`collection`**: The PANTONE collection name.
+- **`code`**: The PANTONE&reg; color code.
+- **`name`**: The PANTONE&reg; color name.
+- **`collection`**: The PANTONE&reg; collection name.
   - `Fashion & Interior Designers`
   - `Graphic Designers`
   - `Industrial Designers`
