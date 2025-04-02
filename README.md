@@ -23,6 +23,8 @@ Each object in the dataset corresponds to a unique PANTONE color record, structu
 - **`rgb`**: The RGB color code.
 - **`cmyk`**: The CMYK color code.
 
+> CMYK values are approximated from RGB and do not reference ICC profiles.
+
 ```json
 {
   "code": "17-1230 TCX",
