@@ -76,7 +76,7 @@ npm start
 ## Roadmap
 
 - [x] Scrape PANTONE® color data
-- [x] Save to JSON
+- [x] Export to JSON
 - [x] Add CMYK support
 - [ ] Export to CSV
 - [ ] Export to SQLite
