@@ -31,11 +31,7 @@ export async function exportToSQLite(dbFilename, data) {
   `;
 
   for (const color of data) {
-    const { code, collection, name, hex } = color;
-    const rgb = Array.isArray(color.rgb) ? color.rgb : [null, null, null];
-    const cmyk = Array.isArray(color.cmyk)
-      ? color.cmyk
-      : [null, null, null, null];
+    const { code, collection, name, hex, rgb, cmyk } = color;
 
     await db.run(insertStmt, [
       code,

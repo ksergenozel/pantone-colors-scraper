@@ -16,11 +16,7 @@ export function exportToCSV(filename, data) {
   ];
 
   const rows = data.map((color) => {
-    const { code, collection, name, hex } = color;
-    const rgb = Array.isArray(color.rgb) ? color.rgb : [null, null, null];
-    const cmyk = Array.isArray(color.cmyk)
-      ? color.cmyk
-      : [null, null, null, null];
+    const { code, collection, name, hex, rgb, cmyk } = color;
 
     return [
       `"${code}"`,

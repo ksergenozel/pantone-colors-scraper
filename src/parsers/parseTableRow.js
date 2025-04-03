@@ -8,7 +8,7 @@ export function parseTableRow($, el, collection) {
   let hex = $(el).find("td:nth-child(3)").text().trim();
   const name = $(el).find("td:nth-child(4)").text().trim();
 
-  if (!code || !rgbString) return null;
+  if (!code) return null;
 
   const [r, g, b] = rgbStringToRGB(rgbString);
   const rgb = [r, g, b];
