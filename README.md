@@ -13,15 +13,15 @@ This scraper collects PANTONE&reg; color data from multiple collections with pag
 
 Each object in the dataset corresponds to a unique PANTONE&reg; color record, structured with the following fields:
 
-- **`code`**: PANTONE&reg; color code.
-- **`name`**: PANTONE&reg; color name.
-- **`collection`**: PANTONE&reg; collection name.
+- **`code`**: PANTONE&reg; color code
+- **`name`**: PANTONE&reg; color name _(optional)_
+- **`collection`**: PANTONE&reg; collection name
   - `Fashion & Interior Designers`
   - `Graphic Designers`
   - `Industrial Designers`
-- **`hex`**: HEX color code.
-- **`rgb`**: RGB color code.
-- **`cmyk`**: CMYK color code.
+- **`hex`**: Hex color code
+- **`rgb`**: RGB color code
+- **`cmyk`**: CMYK color code
 
 > CMYK values are approximated from RGB and do not reference ICC profiles.
 
@@ -38,13 +38,12 @@ Each object in the dataset corresponds to a unique PANTONE&reg; color record, st
 
 ## Tech Stack
 
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/)
 - [Node.js](https://nodejs.org/)
 - [Cheerio](https://cheerio.js.org/)
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) (v18+)
+- [Node.js](https://nodejs.org/)
 
 ## Installation
 
@@ -73,6 +72,14 @@ npm start
 ```
 
 > This script will create a `data.json` file in the root directory.
+
+## Roadmap
+
+- [x] Scrape PANTONE® color data
+- [x] Save to JSON
+- [x] Add CMYK support
+- [ ] Export to CSV
+- [ ] Export to SQLite
 
 ## License
 
