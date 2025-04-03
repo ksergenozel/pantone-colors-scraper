@@ -7,7 +7,7 @@ A web scraper that collects PANTONE&reg; color data from [numerosamente.it](http
 
 ## Features
 
-This scraper collects PANTONE&reg; color data from multiple collections with pagination support, deduplicates the results, and outputs structured JSON and CSV data.
+This scraper collects PANTONE&reg; color data from multiple collections with pagination support, deduplicates the results, and exports to JSON, CSV, and SQLite.
 
 ## Data Structure
 
@@ -40,6 +40,7 @@ Each object in the dataset corresponds to a unique PANTONE&reg; color record, st
 
 - [Node.js](https://nodejs.org/)
 - [Cheerio](https://cheerio.js.org/)
+- [SQLite](https://www.sqlite.org/)
 
 ## Requirements
 
@@ -71,7 +72,7 @@ npm install
 npm start
 ```
 
-> This script will create `data.json` and `data.csv` file in the root directory.
+> This script creates `data.json`, `data.csv` and `pantone.db` files in the root directory.
 
 ## Roadmap
 
@@ -79,7 +80,7 @@ npm start
 - [x] Export to JSON
 - [x] Add CMYK support
 - [x] Export to CSV
-- [ ] Export to SQLite
+- [x] Export to SQLite
 
 ## License
 
