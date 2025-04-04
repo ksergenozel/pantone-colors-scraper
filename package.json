@@ -23,12 +23,23 @@
     "node": ">=18.0.0"
   },
   "prettier": {},
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --check"
+    ]
+  },
   "scripts": {
     "start": "node src/index.js",
+    "test": "echo \"ERROR: No test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "prepare": "husky"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
@@ -43,6 +54,8 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.5",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "prettier": "^3.5.3"
   }
 }
