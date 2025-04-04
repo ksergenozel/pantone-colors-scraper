@@ -1,21 +1,21 @@
-# PANTONE&reg; Colors Scraper
+# PANTONE Colors Scraper
 
-A web scraper that collects PANTONE&reg; color data from [numerosamente.it](https://www.numerosamente.it).
+A web scraper that collects PANTONE color data from [numerosamente.it](https://www.numerosamente.it).
 
 > **Disclaimer:**
-> This project is intended for non-commercial use only and is not associated with PANTONE&reg;.
+> This project is intended for non-commercial use only and is not associated with PANTONE.
 
 ## Features
 
-This scraper collects PANTONE&reg; color data from multiple collections with pagination support, deduplicates the results, and exports to JSON, CSV, and SQLite.
+This scraper collects PANTONE color data from multiple collections with pagination support, deduplicates the results, and exports to JSON, CSV, and SQLite.
 
 ## Data Structure
 
-Each object in the dataset corresponds to a unique PANTONE&reg; color record, structured with the following fields:
+Each object in the dataset corresponds to a unique PANTONE color record, structured with the following fields:
 
-- **`code`**: PANTONE&reg; color code
-- **`name`**: PANTONE&reg; color name _(optional)_
-- **`collection`**: PANTONE&reg; collection name
+- **`code`**: PANTONE color code
+- **`name`**: PANTONE color name _(optional)_
+- **`collection`**: PANTONE collection name
   - `Fashion & Interior Designers`
   - `Graphic Designers`
   - `Industrial Designers`
@@ -76,7 +76,7 @@ npm start
 
 ## Roadmap
 
-- [x] Scrape PANTONE® color data
+- [x] Scrape PANTONE color data
 - [x] Export to JSON
 - [x] Add CMYK support
 - [x] Export to CSV

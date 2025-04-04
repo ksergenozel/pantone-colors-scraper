@@ -1,7 +1,7 @@
 {
   "name": "pantone-colors-scraper",
   "version": "1.0.0",
-  "description": "A web scraper that collects PANTONE® color data.",
+  "description": "A web scraper that collects PANTONE color data.",
   "keywords": [
     "pantone",
     "colors",
