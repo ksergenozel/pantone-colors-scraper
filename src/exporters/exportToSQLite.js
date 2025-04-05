@@ -10,7 +10,7 @@ export async function exportToSQLite(dbFilename, data) {
 
   await db.exec(`
     CREATE TABLE IF NOT EXISTS colors (
-      code TEXT,
+      code TEXT PRIMARY KEY,
       collection TEXT,
       name TEXT,
       hex TEXT,

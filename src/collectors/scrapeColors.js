@@ -9,8 +9,17 @@ export async function scrapeColors() {
     allColors.push(...colors);
   }
 
-  const uniqueColors = [...new Set(allColors.map(JSON.stringify))].map(
-    JSON.parse,
+  const uniqueMap = new Map();
+  for (const color of allColors) {
+    if (!uniqueMap.has(color.code)) {
+      uniqueMap.set(color.code, color);
+    }
+  }
+
+  const uniqueColors = Array.from(uniqueMap.values());
+
+  console.log(
+    `Scraped ${allColors.length} colors, found ${uniqueColors.length} unique colors.`,
   );
 
   return uniqueColors;
