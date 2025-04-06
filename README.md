@@ -74,14 +74,6 @@ npm start
 
 > This script creates `data.json`, `data.csv` and `pantone.db` files in the root directory.
 
-## Roadmap
-
-- [x] Scrape PANTONE color data
-- [x] Export to JSON
-- [x] Add CMYK support
-- [x] Export to CSV
-- [x] Export to SQLite
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
